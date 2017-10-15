@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Grid from './Grid';
+import getAverageCostOfGas from './gasPrices/averageCostOfGas';
+
+const michiganId = 300023;
+const unitedStatesId = 500000;
 
 const App = () => (
   <div>
-    <span>Row1</span>
+    <span>{getAverageCostOfGas(michiganId, unitedStatesId)}</span>
     <span>Row2</span>
   </div>
 );
